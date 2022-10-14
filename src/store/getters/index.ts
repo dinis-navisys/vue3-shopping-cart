@@ -4,7 +4,6 @@ import { ICardItem } from "../types/ICard";
 export const getters = {
     getProducts: (state: State) => state.allProducts,
     getAllCart: (state: State) => state.cart,
-    getAllItemsInCart: (state: State) => state.cart.length,
     getTotal: (state: State) => {
         let total = 0
         state.cart.map((p: ICardItem) => {
@@ -12,4 +11,11 @@ export const getters = {
         })
         return total
     },
+    getCardLength: (state: State) => {
+        let total = 0;
+        state.cart.map((p: ICardItem) => {
+            total += p.quantity!
+        })
+        return total
+    }
 }

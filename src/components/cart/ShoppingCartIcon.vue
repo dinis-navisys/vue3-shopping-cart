@@ -16,8 +16,11 @@ import { useStore } from "vuex";
 const store = useStore();
 
 const getShoppingLength = computed(() => {
-  return store.getters.getAllItemsInCart;
+  return store.getters.getCardLength
 });
+
+console.log(getShoppingLength.value);
+
 </script>
 
 <style scoped>
