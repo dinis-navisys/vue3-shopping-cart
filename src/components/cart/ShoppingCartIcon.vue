@@ -10,16 +10,15 @@
 </template>
 
 <script setup lang="ts">
+
 import { computed } from "vue";
 import { useStore } from "vuex";
 
 const store = useStore();
 
 const getShoppingLength = computed(() => {
-  return store.getters.getCardLength
+  return store.getters.getCardLength;
 });
-
-console.log(getShoppingLength.value);
 
 </script>
 
@@ -44,6 +43,6 @@ console.log(getShoppingLength.value);
 }
 
 .topRight p {
-  padding-left: 4px;
+  padding-left: 7px;
 }
 </style>
