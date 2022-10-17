@@ -14,7 +14,7 @@
               <div class="flex justify-between">
                 <button @click="removeFromCart(card.id)">X</button>
                 <span class="ml-4">{{ card.name }}</span>
-                <span class="ml-4">{{ card.quantity}}x</span>
+                <span class="ml-4">{{ card.quantity }}x</span>
                 <span class="ml-4">{{ card.price }}€</span>
               </div>
             </div>

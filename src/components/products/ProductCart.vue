@@ -46,6 +46,7 @@
 </template>
 
 <script setup lang="ts">
+
 import { onMounted, computed } from "vue";
 import { useStore } from "vuex";
 import { ProductI } from "../../store/types/IProduct";
@@ -109,6 +110,7 @@ const decreaseProductQ = (id: number) => {
 onMounted(() => {
   store.dispatch("fetchProducts");
 });
+
 </script>
 
 <style>

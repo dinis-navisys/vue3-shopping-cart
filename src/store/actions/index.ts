@@ -11,7 +11,7 @@ export const actions = {
         commit("fetchCartData", state.cart);
     },
 
-    addProductToCart({ commit }: {commit: Commit}, product: ProductI) {
+    addProductToCart({ commit }: { commit: Commit }, product: ProductI) {
         commit('addProductToCart', product);
     },
 

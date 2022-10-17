@@ -31,16 +31,16 @@ export const mutations = {
   increaseProduct(state: State, id: number) {
     const oneProduct = state.allProducts.find((p: ICardItem) => p.id === id);
     state.cart.map((i) => {
-      if(i.id === oneProduct!.id) {
+      if (i.id === oneProduct!.id) {
         i.quantity! += 1;
       }
     })
   },
-  
+
   decreaseProduct(state: State, id: number) {
     const oneProduct = state.allProducts.find((p: ProductI) => p.id === id);
     state.cart.map((i: ICardItem) => {
-      if(i.id === oneProduct!.id && i.quantity! > 1) {
+      if (i.id === oneProduct!.id && i.quantity! > 1) {
         i.quantity! -= 1;
       }
     })
