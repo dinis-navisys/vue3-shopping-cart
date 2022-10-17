@@ -56,13 +56,17 @@ const getProducts = computed(() => {
   return store.getters.getProducts;
 });
 
+const getCardLength = computed(() => {
+  return store.getters.getCardLength;
+})
+
 const getCardData = computed(() => {
   return store.state.cart;
 });
 
 const findProductQuantity = {
   get(id: number) {
-    const oneProduct: any = Array.from(getCardData.value).find((item: any) => item.id === id);
+    const oneProduct: any= Array.from(getCardData.value).find((item: any) => item.id === id);
     return oneProduct.quantity;
   }
 }
@@ -90,7 +94,15 @@ const increaseProductQ = (id: number) => {
   return store.dispatch("increaseProduct", id);
 };
 
+const removeFromCart = (id: number) => {
+  return store.dispatch("removeProductFromCard", id);
+};
+
 const decreaseProductQ = (id: number) => {
+  const oneProduct: any = Array.from(getCardData.value).find((item: any) => item.id === id);
+  if(oneProduct.quantity === 1) {
+    removeFromCart(oneProduct.id);
+  }
   return store.dispatch("decreaseProduct", id);
 };
 

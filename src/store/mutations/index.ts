@@ -40,7 +40,7 @@ export const mutations = {
   decreaseProduct(state: State, id: number) {
     const oneProduct = state.allProducts.find((p: ProductI) => p.id === id);
     state.cart.map((i: ICardItem) => {
-      if(i.id === oneProduct!.id && i.quantity! > 0) {
+      if(i.id === oneProduct!.id && i.quantity! > 1) {
         i.quantity! -= 1;
       }
     })
