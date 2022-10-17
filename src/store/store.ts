@@ -69,8 +69,6 @@ const store = createStore({
     },
 
     getters: {
-        getProducts: (state: State) => state.allProducts,
-        getAllCart: (state: State) => state.cart,
         getTotal: (state: State) => {
             let total = 0
             state.cart.map((p: ICardItem) => {

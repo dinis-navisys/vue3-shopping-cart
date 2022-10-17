@@ -58,7 +58,7 @@ import ShoppingCartIcon from "../components/cart/ShoppingCartIcon.vue";
 const store = useStore();
 
 const getProducts = computed(() => {
-  return store.getters.getProducts;
+  return store.state.allProducts;
 });
 
 const getCardLength = computed(() => {
