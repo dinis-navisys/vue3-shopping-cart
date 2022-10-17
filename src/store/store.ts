@@ -1,6 +1,6 @@
-import { ProductI } from "./types/IProduct";
+import { ProductI } from "../types/IProduct";
 import data from "../data/shop-items.json"
-import { ICardItem } from "./types/ICard";
+import { ICardItem } from "../types/ICard";
 import { createStore, Commit, createLogger } from "vuex";
 
 export type State = {
