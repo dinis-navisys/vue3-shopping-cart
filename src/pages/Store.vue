@@ -71,7 +71,7 @@ const getCardData = computed(() => {
 
 const findProductQuantity = {
   get(id: number) {
-    const oneProduct= Array.from(getCardData.value).find((item: any) => item.id === id) as ICardItem;
+    const oneProduct= Array.from(getCardData.value).find((item) => item.id === id) as ICardItem;
     return oneProduct.quantity;
   }
 }
@@ -89,7 +89,7 @@ const addToCard = (product: ProductI) => {
 const checkIfItemIsInCard = {
   get(id: number) {
     const allCard = Array.from(getCardData.value)
-      .map((i: any) => i.id)
+      .map((i) => i.id)
       .includes(id);
     return allCard;
   },
@@ -104,7 +104,7 @@ const removeFromCart = (id: number) => {
 };
 
 const decreaseProductQ = (id: number) => {
-  const oneProduct = Array.from(getCardData.value).find((item: any) => item.id === id) as ICardItem;
+  const oneProduct = Array.from(getCardData.value).find((item) => item.id === id) as ICardItem;
   if(oneProduct.quantity === 1) {
     removeFromCart(oneProduct.id);
   }
