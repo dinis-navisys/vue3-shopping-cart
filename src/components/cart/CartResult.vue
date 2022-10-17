@@ -41,8 +41,4 @@ const getCardData = computed(() => {
 const removeFromCart = (id: number) => {
   return store.dispatch("removeProductFromCard", id);
 };
-
-onMounted(() => {
-  store.dispatch("fetchCartData");
-});
 </script>
