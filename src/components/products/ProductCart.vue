@@ -49,6 +49,7 @@
 
 import { onMounted, computed } from "vue";
 import { useStore } from "vuex";
+import { ICardItem } from "../../store/types/ICard";
 import { ProductI } from "../../store/types/IProduct";
 
 const store = useStore();
@@ -67,7 +68,7 @@ const getCardData = computed(() => {
 
 const findProductQuantity = {
   get(id: number) {
-    const oneProduct: any= Array.from(getCardData.value).find((item: any) => item.id === id);
+    const oneProduct= Array.from(getCardData.value).find((item: any) => item.id === id) as ICardItem;
     return oneProduct.quantity;
   }
 }
@@ -100,7 +101,7 @@ const removeFromCart = (id: number) => {
 };
 
 const decreaseProductQ = (id: number) => {
-  const oneProduct: any = Array.from(getCardData.value).find((item: any) => item.id === id);
+  const oneProduct = Array.from(getCardData.value).find((item: any) => item.id === id) as ICardItem;
   if(oneProduct.quantity === 1) {
     removeFromCart(oneProduct.id);
   }
