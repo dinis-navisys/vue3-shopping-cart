@@ -108,10 +108,6 @@ const decreaseProductQ = (id: number) => {
   return store.dispatch("decreaseProduct", id);
 };
 
-onMounted(() => {
-  store.dispatch("fetchProducts");
-});
-
 </script>
 
 <style>

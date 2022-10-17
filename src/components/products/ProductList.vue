@@ -1,8 +1,8 @@
 <template>
-  <div class="grid grid-cols-3">
-    <ProductCart />
-    <ShoppingCartIcon />
-  </div>
+    <div class="grid grid-cols-3">
+        <ProductCart />
+        <ShoppingCartIcon />
+    </div>
 </template>
 
 <script lang="ts">
