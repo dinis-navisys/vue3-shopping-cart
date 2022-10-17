@@ -51,8 +51,8 @@
 <script setup lang="ts">
 import {  computed } from "vue";
 import { useStore } from "vuex";
-import { ICardItem } from "../store/types/ICard";
-import { ProductI } from "../store/types/IProduct";
+import { ICardItem } from "../types/ICard";
+import { ProductI } from "../types/IProduct";
 import ShoppingCartIcon from "../components/cart/ShoppingCartIcon.vue";
 
 const store = useStore();
@@ -118,7 +118,7 @@ const decreaseProductQ = (id: number) => {
   width: 45px;
   font-size: 2em;
   font-weight: bold;
-  border-radius: 220%;
+  border-radius: 50%;
   background-color: black;
   color: white;
   text-align: center;

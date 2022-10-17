@@ -1,6 +1,6 @@
 <template>
   <span
-    class="helper bg-black text-blue-50 p-4 text-xl absolute bottom-0 right-0 h-36 w-36"
+    class="roundedIcon bg-black text-blue-50 p-4 text-xl absolute bottom-0 right-0 h-36 w-36"
   >
     <i class="icon fa-solid fa-cart-shopping" />
     <span class="topRight">
@@ -21,7 +21,7 @@ const getShoppingLength = computed(() => {
 </script>
 
 <style scoped>
-.helper {
+.roundedIcon {
   border-top-left-radius: 40px;
 }
 
